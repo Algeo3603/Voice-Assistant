@@ -1,0 +1,68 @@
+.form__group {
+    margin: 20px auto; /* Add some margin for the form */
+    max-width: 500px; /* Set a maximum width for the form */
+  }
+  
+  /* Form Styles */
+  .room-form {
+    display: flex; /* Arrange form elements in a row */
+    flex-direction: column; /* Stack elements vertically */
+  }
+  
+  /* Label Styles */
+  .form-group label {
+    display: block; /* Make labels appear on separate lines */
+    margin-bottom: 5px; /* Add some space between label and input */
+    font-weight: bold;
+  }
+  
+  /* Input Styles */
+  .input-style {
+    display: flex; /* Style the container for input elements */
+  }
+  
+  .input-style input,
+  .input-style textarea {
+    border: 1px solid #ccc; /* Add a border to the input fields */
+    padding: 5px; /* Add padding for better readability */
+    margin-bottom: 10px; /* Add space between input fields */
+    width: 100%; /* Make inputs take full width */
+  }
+  
+  /* Form Actions (Cancel & Submit) */
+  .form-action {
+    display: flex; /* Arrange buttons horizontally */
+    justify-content: space-between; /* Align buttons with some spacing */
+  }
+  
+  .form-action a,
+  .form-action button {
+    padding: 10px 20px; /* Add padding for buttons */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Indicate clickable elements */
+    text-decoration: none;
+  }
+  .tempnamebtn {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn btn-outline-primary{
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .form-action a {
+    background-color: #ddd; /* Light background for cancel button */
+    color: #333; /* Dark text for cancel button */
+  }
+  
+  
+  .form-action a:hover,
+  .form-action button:hover {
+    opacity: 0.8; /* Add hover effect (slightly transparent) */
+  }

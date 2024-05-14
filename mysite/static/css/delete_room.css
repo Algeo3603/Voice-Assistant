@@ -1,0 +1,9 @@
+p {
+    text-align: center; 
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+  }
+  .button-container {
+    display: flex; 
+    justify-content: center; 
+}

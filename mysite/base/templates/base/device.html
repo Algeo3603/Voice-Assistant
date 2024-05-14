@@ -1,0 +1,65 @@
+{% comment %}
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{device.name}}{% endblock %}</title>
+</head>
+<body>
+    {% include 'index_new.html' %}
+    {% block content %}
+        {{device.device_name}}
+        {{device.device_type}}
+        {{device.status}}
+    <a href="{% url 'send-message' pk=device.pk %}"><button>Switch</button></a>
+    {% endblock content %}
+</body>
+</html> -->
+{% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ device.name }}{% endblock %}</title>
+    <!-- <script src="{% static 'js/jquery.min.js' %}"></script> Include jQuery for AJAX -->
+</head>
+<body>
+    {% include 'index_new.html' %}
+    {% block content %}
+        {{ device.device_name }}
+        {{ device.device_type }}
+        {{ device.status }}
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <a href="{% url 'send-message' device.id %}"><button id="send-message-btn" data-pk="{{ device.pk }}">Send Message to IoT Hub</button></a>
+    {% endblock content %}
+
+    <!-- <script>
+        $(document).ready(function() {
+            $('#send-message-btn').click(function() {
+                var pk = $(this).data('pk');
+                $.ajax({
+                    url: '/sendmessage/' + pk + '/',
+                    type: 'GET',
+                    success: function(response) {
+                        alert(response.success || response.error || 'Unknown response');
+                        // Handle success or error messages as needed
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error sending message: ' + error);
+                    }
+                });
+            });
+        });
+    </script> -->
+</body>
+</html>

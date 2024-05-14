@@ -1,0 +1,153 @@
+body {
+  background-color: #121212;
+  /* Dark background color */
+  color: #ffffff;
+  /* Light text color */
+  font-family: Arial, sans-serif;
+  /* Choose your preferred font */
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader span {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 38px;
+  letter-spacing: 5px;
+}
+
+.loader span:nth-child(1) {
+  /* color: transparent; */
+  color: #cfcaca;
+  -webkit-text-stroke: 0.4px rgb(128, 198, 255);
+}
+
+.loader span:nth-child(2) {
+  color: rgb(128, 198, 255);
+  -webkit-text-stroke: 1px rgb(128, 198, 255);
+  animation: loading 3s ease-in-out infinite;
+}
+
+@keyframes loading {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%,
+        54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%,
+        51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  padding: 20px 0;
+  opacity: 0;
+}
+
+/* nav {
+  padding: 20px 0;
+} */
+
+/* Header styles */
+.header {
+  background-color: #1f1f1f;
+  /* Darker header background color */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Shadow for header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+.logo a {
+  color: #ffffff;
+  /* Light color for logo text */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .nav-links {
+  color: #ffffff;
+  /* Light color for navigation links */
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navbar .nav-links:hover {
+  text-decoration: underline;
+}
+
+/* Additional styles */
+p {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  /* Already set */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-auth {
+  /* Remove margin-left: auto */
+  display: inline-block;
+  align-items: right;
+  /* Align items vertically */
+  justify-content: flex-start;
+  /* Align items to the left */
+}
+
+.nav-greeting {
+  margin-right: 10px;
+}
+
+.nav-links,
+a {
+  margin: 0 5px;
+  /* Reduced spacing */
+  padding: 5px 10px;
+  /* Adjust padding if needed */
+}

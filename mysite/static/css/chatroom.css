@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    color: #333;
+  }
+  h3 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    color: #333;
+  }
+  .home-container {
+    display: flex; 
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Chat List (assuming it's in the left div) */
+  .home-container > div:first-child {
+    flex: 0 0 200px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto; /* Enable scrolling for long chat lists */
+    padding: 10px;
+  }
+  
+  /* Chat History (assuming it's in the right div) */
+  .home-container > div:last-child {
+    flex: 1; /* Take up remaining space */
+    padding: 10px;
+    height: 400px; /* Set a default height for the chat history */
+    overflow-y: scroll; /* Enable scrolling for chat history */
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-message.incoming {
+    background-color: #eee;
+    justify-content: flex-start;
+  }
+  
+  .chat-message.incoming .username {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  /* Outgoing Message (from User) */
+  .chat-message.outgoing {
+    background-color: #428bca;
+    color: #fff;
+    justify-content: flex-end;
+  }
+  
+  .chat-message.outgoing .username {
+    font-weight: bold;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  /* Message Text */
+  .chat-message .message-text {
+    flex: 1;
+  }
+  
+  /* Login Message Styling */
+  .login-message {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+  }  
