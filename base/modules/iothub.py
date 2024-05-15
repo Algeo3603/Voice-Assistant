@@ -1,13 +1,13 @@
 from azure.iot.device import IoTHubDeviceClient
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
-IOT_HUB_KEY = os.getenv('IOT_HUB_KEY')
+# load_dotenv()
+# IOT_HUB_KEY = os.getenv('IOT_HUB_KEY')
 
-CONNECTION_STRING = IOT_HUB_KEY
+# CONNECTION_STRING = IOT_HUB_KEY
 
-def message_to_raspberrypi(device_name, status):
+def message_to_raspberrypi(device_name, CONNECTION_STRING, status):
     # Create an instance of the device client using the connection string
     client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
 

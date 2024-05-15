@@ -199,13 +199,14 @@ def sendMessage(request, pk):
     device = Device.objects.filter(pk=pk, user=request.user).first()
     device_name = device.device_name
     device_status = device.status
+    device_connection_string = device.connection_string
     if not device:
         # Device not found or does not belong to the user
         messages.error(request, 'Device not found or you do not have permission to access it.')
-        return JsonResponse({'error': 'Device not found or unauthorized'}, status=404)
-
+        # return JsonResponse({'error': 'Device not found or unauthorized'}, status=404)
+        
     try:
-        message_sent = message_to_raspberrypi(device_name, device_status)
+        message_sent = message_to_raspberrypi(device_name, device_connection_string, device_status)
         if message_sent:
             messages.success(request, 'Message sent successfully to IoT Hub.')
             device.status = not device.status
