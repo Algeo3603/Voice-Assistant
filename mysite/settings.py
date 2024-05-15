@@ -25,23 +25,16 @@ SECRET_KEY = 'django-insecure-^=6-_k)oh!n9-fpcd1qd0rf(!8y2!!8cc*so1if(!*ydv@*_dc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '8000-monospace-study-1712506175321.cluster-76blnmxvvzdpat4inoxk5tmzik.cloudworkstations.dev',
-    '127.0.0.1',
-    'https://9000-monospace-study-1712506175321.cluster-76blnmxvvzdpat4inoxk5tmzik.cloudworkstations.dev'
-    ]
+ALLOWED_HOSTS = []
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-monospace-study-1712506175321.cluster-76blnmxvvzdpat4inoxk5tmzik.cloudworkstations.dev',
-    'https://9000-monospace-study-1712506175321.cluster-76blnmxvvzdpat4inoxk5tmzik.cloudworkstations.dev',
-    ]
+CSRF_TRUSTED_ORIGINS = []
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/login/'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_FROM = 'arry6721@gmail.com'
 EMAIL_HOST_USER = 'arry6721@gmail.com'
@@ -69,7 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base',
+    'base.apps.BaseConfig',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
