@@ -43,7 +43,8 @@ class ConnectionString(models.Model):
     connection_string = models.CharField(max_length=255, unique = True)
 
     def __str__(self):
-        return f"Connection String: {self.connection_string} - User: {self.user.email}"
+        # return f"Connection String: {self.connection_string} - User: {self.user.email}"
+        return f"{self.connection_string}"
 
 
 class Device(models.Model):

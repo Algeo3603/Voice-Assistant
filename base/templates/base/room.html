@@ -27,7 +27,8 @@
                             {% if message.sender == 'User' %}
                                 <small>{{ user.username }}</small>
                             {% else %}
-                            <small>{{ message.sender }}</small>
+                            <!-- <small>{{ message.sender }}</small> -->
+                            <small>Jarvis</small>
                             {% endif %}
                             <p>{{ message.message }}</p>
                             {% if message.sender == 'User' and request.user == message.user %}

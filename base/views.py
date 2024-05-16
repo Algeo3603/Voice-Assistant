@@ -59,7 +59,7 @@ def room(request, pk):
                 bot_message = bot_message_form.save(commit=False)
                 bot_message.user = None
                 bot_message.room = room
-                bot_message.sender = 'Jarvis'
+                bot_message.sender = 'Assistant'
                 bot_message.message = bot_reply
                 bot_message.save()
 
@@ -190,7 +190,7 @@ def devices(request):
 def device(request, pk):
     device = Device.objects.get(id=pk)
     context = {'device': device}
-    print(device, type(device))
+    # print(device, type(device))
     return render(request, 'base/device.html', context)
 
 @login_required(login_url='account_login')
@@ -199,7 +199,8 @@ def sendMessage(request, pk):
     device = Device.objects.filter(pk=pk, user=request.user).first()
     device_name = device.device_name
     device_status = device.status
-    device_connection_string = device.connection_string
+    device_connection_string = str(device.connection_string)
+    print(device_connection_string, type(device_connection_string), str(device_connection_string))
     if not device:
         # Device not found or does not belong to the user
         messages.error(request, 'Device not found or you do not have permission to access it.')

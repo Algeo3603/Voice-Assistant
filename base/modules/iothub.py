@@ -10,7 +10,7 @@ import os
 def message_to_raspberrypi(device_name, CONNECTION_STRING, status):
     # Create an instance of the device client using the connection string
     client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
-
+    print(f"iothub: {CONNECTION_STRING}")
     messages = [device_name, "off" if status else "on"]
     message = " ".join(messages)
     final_message = message.strip()
