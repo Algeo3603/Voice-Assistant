@@ -6,7 +6,8 @@ from django.db.models import Q
 from .models import Room, Message, ConnectionString, Device
 from .forms import RoomForm, MessageForm, ConnectionStringForm, DeviceForm
 from .modules.llm import LLM
-from .modules.iothub import message_to_raspberrypi
+# from .modules.iothub import message_to_raspberrypi
+from .modules.iothub import iothub_message
 # Create your views here.
 
 
@@ -207,7 +208,8 @@ def sendMessage(request, pk):
         # return JsonResponse({'error': 'Device not found or unauthorized'}, status=404)
         
     try:
-        message_sent = message_to_raspberrypi(device_name, device_connection_string, device_status)
+        # message_sent = message_to_raspberrypi(device_name, device_connection_string, device_status)
+        message_sent = iothub_message(device_name, device_connection_string, device_status)
         if message_sent:
             messages.success(request, 'Message sent successfully to IoT Hub.')
             device.status = not device.status
