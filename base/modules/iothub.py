@@ -1,4 +1,4 @@
-from azure.iot.device import IoTHubDeviceClient
+# from azure.iot.device import IoTHubDeviceClient
 from azure.iot.hub import IoTHubRegistryManager
 import os
 import sys
