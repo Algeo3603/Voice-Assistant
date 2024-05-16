@@ -13,9 +13,9 @@
       {% load account %}
         <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
           <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-              <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
+            <a href="#" class="d-inline-flex link-body-emphasis text-decoration-none">
+              <img src="../static/img/j.png" alt="Bootstrap" width="60" height="60" style="border-radius: 10px;">
+          </a>         
           </div>
           <div style="margin-left: 50%;">
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -39,14 +39,13 @@
               </div>
             {% else %}
             {% if page != 'account_login' and page != 'account_signup' %}
-            <div class="col-md-3 text-end">
-              <a href="{% url 'account_login' %}">
-                <button type="button" class="btn btn-primary" style="margin-left: 85%; text-decoration: none;">Login</button>
-              </a>
-              <a href="{% url 'account_signup' %}">
-                <button type="button" class="btn btn-outline-primary me-2" style="margin-left: 90%; text-decoration: none;">Sign Up</button>
-              </a>
-            </div>
+            <div class="buttons-container d-flex justify-content-end">  <a href="{% url 'account_login' %}">
+              <button type="button" class="btn btn-primary">Login</button>
+            </a>
+            <a href="{% url 'account_signup' %}">
+              <button type="button" class="btn btn-outline-primary me-2">Sign Up</button>
+            </a>
+          </div>
             {% endif %}
             {% endif %}
         </div>
@@ -55,7 +54,7 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
-            <img src="./static/images/voice-assistant.png" class="d-block mx-lg-auto img-fluid" alt="Voice Assistant" width="1500" height="10000" loading="lazy" bor>
+            <img src="./static/images/voice-assistant.png" class="d-block mx-lg-auto img-fluid" alt="Voice Assistant" width="1500" height="10000" loading="lazy" style="border-radius: 10px;">
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Jarvis</h1>
@@ -74,13 +73,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./static/images/carousel1.png" class="d-block w-100" alt="smart home pod">
+            <img src="./static/images/carousel1.png" class="d-block w-100" alt="smart home pod" style="border-radius: 10px;">
           </div>
           <div class="carousel-item">
-            <img src="./static/images/carousel2.png" class="d-block w-100" alt="smart home pod">
+            <img src="./static/images/carousel2.png" class="d-block w-100" alt="smart home pod" style="border-radius: 10px;">
           </div>
           <div class="carousel-item">
-            <img src="./static/images/carousel3.png" class="d-block w-100" alt="smart home pod">
+            <img src="./static/images/carousel3.png" class="d-block w-100" alt="smart home pod" style="border-radius: 10px;">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

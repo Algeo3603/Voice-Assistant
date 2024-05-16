@@ -1,0 +1,120 @@
+body {
+    margin: 40px;
+    font-family: Arial, sans-serif; /* Default font */
+    background-color: #212529; /* Dark background */
+    color: #fff; /* White text color */
+}
+
+/* Container */
+.container {
+    max-width: 500px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the content */
+    background-color: #343a40; /* Darker background for container */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Add shadow for depth */
+    text-align: center; /* Center the content inside the container */
+}
+
+/* Heading */
+h1 {
+    text-align: center; /* Center the heading */
+    color: #007bff; /* Blue heading color */
+    font-weight: bold; 
+}
+
+/* Paragraph */
+p {
+    text-align: center; /* Center the paragraph */
+    margin-bottom: 20px; /* Add space below the paragraph */
+    color: #dee2e6; /* Lighter text color */
+}
+
+/* Form */
+form {
+    margin-top: 20px; /* Add space on top of the form */
+    text-align: center; /* Center the form elements */
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 35%; /* Full width input fields */
+    padding: 10px; /* Add padding to input fields */
+    margin-bottom: 10px; /* Add space between input fields */
+    border: 1px solid #6c757d; /* Darker border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #343a40; /* Darker background */
+    color: #fff; /* White text color */
+}
+
+/* Forgot password link */
+.forgot-password {
+    text-align: left; /* Align the forgot password link to the left */
+    margin-bottom: 20px; /* Add space below the link */
+}
+
+.forgot-password a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Button */
+button[type="submit"] {
+    width: 25%; /* Full width button */
+    padding: 10px; /* Add padding to button */
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor pointer on button */
+    margin-top: 20px; /* Add space above the button */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Link */
+a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for unordered lists */
+ul {
+    list-style-type: none; /* Remove default list-style */
+    padding: 0; /* Remove default padding */
+    margin: 0 auto; /* Center the unordered list horizontally */
+    max-width: 300px; /* Example: set a max-width for the list */
+}
+
+/* Styling for list items */
+ul li {
+    margin-bottom: 10px; /* Add space between list items */
+    color: #b5b5b5;
+}
+
+/* Styling for links within list items */
+ul li a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Center button */
+.center-btn {
+    text-align: center;
+}

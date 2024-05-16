@@ -9,8 +9,7 @@
         {% trans "Sign In" %}
     {% endelement %}
     <p>
-        {% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+        {% blocktrans %}Don't have an account? <a href="{{ signup_url }}">Sign Up</a>{% endblocktrans %}
     </p>
     {% url 'account_login' as login_url %}
     {% element form form=form method="post" action=login_url tags="entrance,login" %}
@@ -22,12 +21,16 @@
                 <input type="hidden"
                        name="{{ redirect_field_name }}"
                        value="{{ redirect_field_value }}" />
+                
+                
             {% endif %}
         {% endslot %}
         {% slot actions %}
-            {% element button type="submit" tags="prominent,login" %}
-                {% trans "Sign In" %}
-            {% endelement %}
+            <div class="center-btn">
+                {% element button type="submit" tags="prominent,login" %}
+                    {% trans "Sign In" %}
+                {% endelement %}
+            </div>
         {% endslot %}
     {% endelement %}
     {% if SOCIALACCOUNT_ENABLED %}

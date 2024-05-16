@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,20 +30,19 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Chat List (assuming it's in the left div) */
+
   .home-container > div:first-child {
     flex: 0 0 200px;
     border-right: 1px solid #ddd;
-    overflow-y: auto; /* Enable scrolling for long chat lists */
+    overflow-y: auto; 
     padding: 10px;
   }
-  
-  /* Chat History (assuming it's in the right div) */
+
   .home-container > div:last-child {
-    flex: 1; /* Take up remaining space */
+    flex: 1; 
     padding: 10px;
-    height: 400px; /* Set a default height for the chat history */
-    overflow-y: scroll; /* Enable scrolling for chat history */
+    height: 400px; 
+    overflow-y: scroll; 
   }
   
   .chat-message {
@@ -65,7 +64,7 @@ body {
     margin-right: 10px;
   }
   
-  /* Outgoing Message (from User) */
+ 
   .chat-message.outgoing {
     background-color: #428bca;
     color: #fff;
@@ -78,12 +77,12 @@ body {
     margin-left: 10px;
   }
   
-  /* Message Text */
+
   .chat-message .message-text {
     flex: 1;
   }
   
-  /* Login Message Styling */
+ 
   .login-message {
     text-align: center;
     color: #aaa;
