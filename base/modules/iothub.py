@@ -26,7 +26,7 @@ def iothub_message(device_name, CONNECTION_STRING, status):
             "contentType": "application/json"
         }
 
-        registry_manager.send_c2d_message(device_name, data, properties=props)
+        registry_manager.send_c2d_message("raspberry", data, properties=props)
         return True
     except Exception as e:
         print("Unexpected error:", e)
