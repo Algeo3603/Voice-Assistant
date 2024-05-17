@@ -3,8 +3,8 @@ from .settings import *
 from .settings import BASE_DIR
 
 SECRET_KEY = os.environ['SECRET']
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
-CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 DEBUG = False
 
 MIDDLEWARE = [
@@ -19,6 +19,7 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware'
 ]
 
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -34,3 +35,13 @@ DATABASES = {
     }
 }
 
+CACHES = {
+        "default": {  
+            "BACKEND": "django_redis.cache.RedisCache",
+            "LOCATION": os.environ.get('AZURE_REDIS_CONNECTIONSTRING'),
+            "OPTIONS": {
+                "CLIENT_CLASS": "django_redis.client.DefaultClient",
+                "COMPRESSOR": "django_redis.compressors.zlib.ZlibCompressor",
+        },
+    }
+}

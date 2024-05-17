@@ -16,7 +16,7 @@ idna==3.7
 isodate==0.6.1
 msrest==0.7.1
 oauthlib==3.2.2
-psycopg==3.1.19
+psycopg2-binary==2.9.9
 pydantic==2.7.1
 pydantic_core==2.18.2
 python-dotenv==1.0.1
@@ -29,3 +29,4 @@ typing_extensions==4.11.0
 uamqp==1.6.9
 urllib3==2.2.1
 whitenoise==6.6.0
+django-redis==5.4.0
